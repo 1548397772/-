@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadMoreView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwx-IU-ATW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-90-h6o">
+                    <rect key="frame" x="331" y="10" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="aga-Kc-nq6"/>
+                    </constraints>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rwx-IU-ATW" secondAttribute="trailing" id="BPo-Z6-nwW"/>
+                <constraint firstAttribute="bottom" secondItem="rwx-IU-ATW" secondAttribute="bottom" id="ETW-6s-ipH"/>
+                <constraint firstAttribute="bottom" secondItem="0d8-90-h6o" secondAttribute="bottom" constant="10" id="UGF-1W-bba"/>
+                <constraint firstItem="rwx-IU-ATW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fQh-nn-vcV"/>
+                <constraint firstAttribute="trailing" secondItem="0d8-90-h6o" secondAttribute="trailing" constant="24" id="v4s-0N-4dj"/>
+                <constraint firstItem="0d8-90-h6o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="zFH-1g-81R"/>
+                <constraint firstItem="rwx-IU-ATW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zii-fS-rxv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="indicator" destination="0d8-90-h6o" id="5p3-tA-9ZT"/>
+                <outlet property="label" destination="rwx-IU-ATW" id="DZU-dW-HXv"/>
+            </connections>
+        </view>
+    </objects>
+</document>
